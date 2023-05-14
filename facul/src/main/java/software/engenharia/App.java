@@ -61,8 +61,6 @@ public class App {
         break;
         case 5:
         System.out.println("Obrigado por utilizar nossos serviços!");
-        case 6:
-        System.out.println("Saindo...");
         break;
         default:
         System.out.println("Opção inválida!");
@@ -70,6 +68,7 @@ public class App {
     }
 
     System.out.println("Os dados do cliente são: " + account);
+    System.out.println("Obrigado por utilizar nossos serviços!");
     sc.close();
   }
 }
