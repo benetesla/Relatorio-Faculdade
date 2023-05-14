@@ -9,11 +9,11 @@ public class Account extends Cliente{
     private int accountNumber;
     private double balance;
     private String type;
-    private String deposito;
-    private String saque;
-    private String transferencia;
+    private double deposito;
+    private double saque;
+    private double transferencia;
 
-    public Account(String nome, String sobrenome, String rg, String email, String phone, String address, String password, int accountNumber, double balance, String type, String deposito, String saque, String transferencia) {
+    public Account(String nome, String sobrenome, int accountNumber, double balance, String type, double deposito, double saque, double transferencia) {
         super(nome, sobrenome);
         this.accountNumber = accountNumber;
         this.balance = balance;
@@ -22,6 +22,7 @@ public class Account extends Cliente{
         this.saque = saque;
         this.transferencia = transferencia;
     }
+    
     public void depositar(){
         System.out.println("Digite o valor a ser depositado: ");
         double valor = 0;
@@ -43,27 +44,20 @@ public class Account extends Cliente{
     public void sair(){
         System.out.println("Obrigado por utilizar nossos serviços!");
     }
-    public void menu(){
-        System.out.println("1 - Depositar");
-        System.out.println("2 - Sacar");
-        System.out.println("3 - Transferir");
-        System.out.println("4 - Sair");      
-        String opcao = "";
+    public void menu(int opcao){
         switch (opcao){
-            case "1":
-                depositar();
+            case 1:
+                this.depositar();
                 break;
-            case "2":
-            Sacar();
+            case 2:
+                this.Sacar();
                 break;
-            case "3":
-                transferir();
+            case 3:
+                this.transferir();
                 break;
-            case "4":
-                sair();
+            case 4:
+                this.sair();
                 break;
-            default:
-                System.out.println("Opção inválida");
         }
     }
 @Override
